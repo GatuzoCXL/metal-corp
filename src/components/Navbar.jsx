@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,12 +18,16 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             {/* Logo */}
-            <Link
-              to="hero"
+            <a
+              href="#hero"
               className="text-2xl font-bold text-white hover:text-secondary transition-colors duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Metal Corp
-            </Link>
+            </a>
           </div>
 
           {/* Desktop menu */}
@@ -34,6 +37,10 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById(item.href.replace('#', '')).scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 {item.name}
               </a>
@@ -69,7 +76,11 @@ const Navbar = () => {
               key={item.name}
               href={item.href}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById(item.href.replace('#', '')).scrollIntoView({ behavior: 'smooth' });
+                setIsOpen(false);
+              }}
             >
               {item.name}
             </a>
