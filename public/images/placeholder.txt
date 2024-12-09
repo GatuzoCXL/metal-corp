@@ -1,0 +1,15 @@
+Coloca aquí las siguientes imágenes:
+
+1. hero-bg.jpg - Imagen principal (recomendado: 1920x1080px)
+   Sugerencia: Una imagen impactante de soldadura o trabajo metalúrgico
+
+2. project1.jpg - (recomendado: 800x600px)
+   Sugerencia: Imagen de soldadura industrial
+
+3. project2.jpg - (recomendado: 800x600px)
+   Sugerencia: Imagen de estructura metálica
+
+4. project3.jpg - (recomendado: 800x600px)
+   Sugerencia: Imagen de trabajo de precisión
+
+Nota: Mientras no tengas las imágenes, el sitio mostrará espacios en blanco en estas áreas.
